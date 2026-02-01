@@ -27,7 +27,8 @@
         body { font-family: 'Tajawal', 'Poppins', sans-serif; transition: background 0.3s ease; scroll-behavior: smooth; }
         .solar-gradient { background: linear-gradient(135deg, #FFB800 0%, #FF8A00 100%); }
         .experience-card { border-right: 4px solid #FFB800; transition: all 0.3s ease; }
-        .experience-card:hover { transform: scale(1.02); shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .experience-card:hover { transform: scale(1.01); }
+        [dir="ltr"] .experience-card { border-right: 0; border-left: 4px solid #FFB800; }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 dark:text-white">
@@ -39,13 +40,13 @@
                 <span class="text-xl font-bold tracking-tighter" id="nav-name">المهندس رشاد</span>
             </div>
             <div class="flex items-center gap-4 text-sm font-medium hidden md:flex">
-                <a href="#about" class="hover:text-solar transition">نبذة</a>
-                <a href="#experience" class="hover:text-solar transition">الخبرات</a>
-                <a href="#education" class="hover:text-solar transition">المؤهلات</a>
-                <a href="#skills" class="hover:text-solar transition">المهارات</a>
+                <a href="#about" class="hover:text-solar transition" id="link-about">نبذة</a>
+                <a href="#experience" class="hover:text-solar transition" id="link-exp">الخبرات</a>
+                <a href="#education" class="hover:text-solar transition" id="link-edu">المؤهلات</a>
+                <a href="#skills" class="hover:text-solar transition" id="link-skills">المهارات</a>
             </div>
             <div class="flex items-center gap-4">
-                <button onclick="toggleLanguage()" class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition text-sm">EN / عربي</button>
+                <button onclick="toggleLanguage()" class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition text-sm font-bold">EN / عربي</button>
                 <button onclick="toggleDarkMode()" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-full">
                     <i id="theme-icon" class="fas fa-moon"></i>
                 </button>
@@ -64,7 +65,7 @@
             <p class="text-xl text-gray-200 mb-10 max-w-3xl mx-auto" id="hero-desc">خبرة تزيد عن 10 سنوات في إدارة وصيانة محطات توليد الطاقة الكهربائية وأجهزة التحكم واستشاري محطات الطاقة الشمسية.</p>
             <div class="flex flex-wrap justify-center gap-6">
                 <a href="#contact" class="solar-gradient text-black px-10 py-4 rounded-xl font-bold hover:scale-105 transition shadow-xl" id="btn-contact">تواصل معي</a>
-                <a href="#experience" class="bg-white/20 text-white px-10 py-4 rounded-xl font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 transition" id="btn-exp">المسار المهني</a>
+                <a href="#experience" class="bg-white/20 text-white px-10 py-4 rounded-xl font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 transition" id="btn-exp-hero">المسار المهني</a>
             </div>
         </div>
     </section>
@@ -79,12 +80,12 @@
                 <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md experience-card" data-aos="fade-right">
                     <div class="flex flex-col md:flex-row justify-between mb-4">
                         <div>
-                            <h3 class="text-xl font-bold">نائب مدير محطة كهرباء المصنع</h3>
-                            <p class="text-solar font-bold">الشركة العربية اليمنية للأسمنت المحدودة</p>
+                            <h3 class="text-xl font-bold" id="job1-title">نائب مدير محطة كهرباء المصنع</h3>
+                            <p class="text-solar font-bold" id="job1-company">الشركة العربية اليمنية للأسمنت المحدودة</p>
                         </div>
-                        <span class="text-gray-500 text-sm">حاليًا</span>
+                        <span class="text-gray-500 text-sm" id="job1-date">حاليًا</span>
                     </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 text-justify" id="job1-list">
                         <li>إدارة محطة بقدرة 35 ميجا وات (5 مكائن كتربيلر، مولدات ليروي سومر، ونظم سكادا).</li>
                         <li>مهندس كهرباء وإلكترونيات لمشروع الطاقة الشمسية بقدرة 13.5 ميجا وات ونظام بطاريات 5.6 ميجا وات ساعة.</li>
                         <li>عضو اللجنة الاستشارية: إعداد عطاء المشروع والمواصفات الفنية وتحليل العروض.</li>
@@ -100,13 +101,13 @@
                 <h2 class="text-3xl font-bold mb-8 flex items-center gap-3" id="edu-title">
                     <i class="fas fa-graduation-cap text-solar"></i> المؤهلات التعليمية
                 </h2>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border-r-4 border-blue-500">
-                    <h4 class="font-bold">بكالوريوس هندسة إلكترونية واتصالات</h4>
-                    <p class="text-gray-500">جامعة حضرموت للعلوم والتكنولوجيا</p>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border-r-4 border-blue-500 mb-4">
+                    <h4 class="font-bold" id="edu1-degree">بكالوريوس هندسة إلكترونية واتصالات</h4>
+                    <p class="text-gray-500" id="edu1-univ">جامعة حضرموت للعلوم والتكنولوجيا</p>
                 </div>
-                <div class="mt-4 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border-r-4 border-blue-500">
-                    <h4 class="font-bold">دبلوم لغة إنجليزية</h4>
-                    <p class="text-gray-500">المعهد الدولي الحديث - المكلا</p>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border-r-4 border-blue-500">
+                    <h4 class="font-bold" id="edu2-degree">دبلوم لغة إنجليزية</h4>
+                    <p class="text-gray-500" id="edu2-inst">المعهد الدولي الحديث - المكلا</p>
                 </div>
             </div>
             
@@ -117,15 +118,15 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
                         <i class="fas fa-check-circle text-solar"></i>
-                        <span>دورة متخصصة بمحطات التوليد - شركة Woodward (ألمانيا)</span>
+                        <span id="cert1">دورة متخصصة بمحطات التوليد - شركة Woodward (ألمانيا)</span>
                     </div>
                     <div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
                         <i class="fas fa-check-circle text-solar"></i>
-                        <span>صيانة ميكانيكية كبرى (كتربيلر) - Desert Marine Diesel (أمريكا)</span>
+                        <span id="cert2">صيانة ميكانيكية كبرى (كتربيلر) - Desert Marine Diesel (أمريكا)</span>
                     </div>
                     <div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
                         <i class="fas fa-check-circle text-solar"></i>
-                        <span>القيادة الإدارية والتقييم الفعال (مركز القادة للتطوير)</span>
+                        <span id="cert3">القيادة الإدارية والتقييم الفعال (مركز القادة للتطوير)</span>
                     </div>
                 </div>
             </div>
@@ -133,22 +134,22 @@
 
         <section id="skills" class="py-12">
             <h2 class="text-3xl font-bold mb-12 text-center" id="skills-title">المهارات والقدرات</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm" data-aos="zoom-in">
                     <i class="fas fa-tasks text-3xl text-solar mb-3"></i>
-                    <h4 class="font-bold">إدارة المشاريع</h4>
+                    <h4 class="font-bold" id="skill1">إدارة المشاريع</h4>
                 </div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in" data-aos-delay="100">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm" data-aos="zoom-in" data-aos-delay="100">
                     <i class="fas fa-users text-3xl text-solar mb-3"></i>
-                    <h4 class="font-bold">قيادة فريق العمل</h4>
+                    <h4 class="font-bold" id="skill2">قيادة فريق العمل</h4>
                 </div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fas fa-clock text-3xl text-solar mb-3"></i>
-                    <h4 class="font-bold">إدارة الوقت</h4>
+                    <h4 class="font-bold" id="skill3">إدارة الوقت</h4>
                 </div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in" data-aos-delay="300">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm" data-aos="zoom-in" data-aos-delay="300">
                     <i class="fas fa-bolt text-3xl text-solar mb-3"></i>
-                    <h4 class="font-bold">العمل تحت الضغط</h4>
+                    <h4 class="font-bold" id="skill4">العمل تحت الضغط</h4>
                 </div>
             </div>
         </section>
@@ -161,9 +162,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input type="text" id="sender-name" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 outline-none focus:ring-2 focus:ring-solar" placeholder="الاسم الكامل">
                 <select id="service-type" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 outline-none">
-                    <option value="استشارة طاقة">طلب استشارة فنية</option>
-                    <option value="صيانة">طلب خدمات صيانة</option>
-                    <option value="أخرى">أخرى</option>
+                    <option value="استشارة طاقة" id="opt1">طلب استشارة فنية</option>
+                    <option value="صيانة" id="opt2">طلب خدمات صيانة</option>
+                    <option value="أخرى" id="opt3">أخرى</option>
                 </select>
                 <textarea id="sender-message" rows="4" class="md:col-span-2 w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 outline-none focus:ring-2 focus:ring-solar" placeholder="رسالتك هنا..."></textarea>
                 <button onclick="sendToWhatsApp()" class="md:col-span-2 bg-[#25D366] text-white py-4 rounded-xl font-bold flex justify-center items-center gap-3 hover:bg-[#128C7E] transition">
@@ -175,10 +176,10 @@
 
     <footer class="py-12 bg-white dark:bg-slate-900 border-t dark:border-slate-800 text-center">
         <div class="mb-4">
-            <p class="font-bold">رشاد عبد الرحمن بن الشيخ ابوبكر</p>
-            <p class="text-gray-500 text-sm">المكلا، حضرموت، اليمن | 00967-738389860</p>
+            <p class="font-bold" id="footer-name">رشاد عبد الرحمن بن الشيخ ابوبكر</p>
+            <p class="text-gray-500 text-sm" id="footer-info">المكلا، حضرموت، اليمن | 00967-738389860</p>
         </div>
-        <p class="text-xs text-gray-400">&copy; 2024 جميع الحقوق محفوظة</p>
+        <p class="text-xs text-gray-400" id="footer-copy">&copy; 2024 جميع الحقوق محفوظة</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -196,33 +197,69 @@
         let currentLang = 'ar';
         const content = {
             ar: {
-                navName: "المهندس رشاد", heroTag: "مهندس كهرباء وإلكترونيات", heroName: "رشاد عبد الرحمن حسين بن الشيخ ابوبكر",
-                heroDesc: "خبرة تزيد عن 10 سنوات في إدارة وصيانة محطات توليد الطاقة الكهربائية وأجهزة التحكم واستشاري محطات الطاقة الشمسية.",
-                btnContact: "تواصل معي", btnExp: "المسار المهني", expTitle: "الخبرات العملية", eduTitle: "المؤهلات التعليمية",
-                certTitle: "الشهادات التدريبية", skillsTitle: "المهارات والقدرات", btnSend: "إرسال عبر واتساب"
+                "nav-name": "المهندس رشاد", "link-about": "نبذة", "link-exp": "الخبرات", "link-edu": "المؤهلات", "link-skills": "المهارات",
+                "hero-tag": "مهندس كهرباء وإلكترونيات", "hero-name": "رشاد عبد الرحمن حسين بن الشيخ ابوبكر",
+                "hero-desc": "خبرة تزيد عن 10 سنوات في إدارة وصيانة محطات توليد الطاقة الكهربائية وأجهزة التحكم واستشاري محطات الطاقة الشمسية.",
+                "btn-contact": "تواصل معي", "btn-exp-hero": "المسار المهني",
+                "exp-title": "الخبرات العملية", "job1-title": "نائب مدير محطة كهرباء المصنع", "job1-company": "الشركة العربية اليمنية للأسمنت المحدودة", "job1-date": "حاليًا",
+                "job1-list": `<li>إدارة محطة بقدرة 35 ميجا وات (5 مكائن كتربيلر، مولدات ليروي سومر، ونظم سكادا).</li>
+                              <li>مهندس كهرباء وإلكترونيات لمشروع الطاقة الشمسية بقدرة 13.5 ميجا وات ونظام بطاريات 5.6 ميجا وات ساعة.</li>
+                              <li>عضو اللجنة الاستشارية: إعداد عطاء المشروع والمواصفات الفنية وتحليل العروض.</li>
+                              <li>الإشراف المباشر على أقسام الصيانة وإعداد برامج الصيانة الوقائية والتصحيحية.</li>
+                              <li>التواصل مع الشركات المصنعة لطلب قطع الغيار والحصول على الدعم الفني.</li>`,
+                "edu-title": "المؤهلات التعليمية", "edu1-degree": "بكالوريوس هندسة إلكترونية واتصالات", "edu1-univ": "جامعة حضرموت للعلوم والتكنولوجيا",
+                "edu2-degree": "دبلوم لغة إنجليزية", "edu2-inst": "المعهد الدولي الحديث - المكلا",
+                "cert-title": "الشهادات التدريبية", 
+                "cert1": "دورة متخصصة بمحطات التوليد - شركة Woodward (ألمانيا)",
+                "cert2": "صيانة ميكانيكية كبرى (كتربيلر) - Desert Marine Diesel (أمريكا)",
+                "cert3": "القيادة الإدارية والتقييم الفعال (مركز القادة للتطوير)",
+                "skills-title": "المهارات والقدرات", "skill1": "إدارة المشاريع", "skill2": "قيادة فريق العمل", "skill3": "إدارة الوقت", "skill4": "العمل تحت الضغط",
+                "msg-title": "تواصل مباشر", "msg-subtitle": "أرسل رسالتك وسيتم توجيهك إلى الواتساب", "opt1": "طلب استشارة فنية", "opt2": "طلب خدمات صيانة", "opt3": "أخرى", "btn-send": "إرسال عبر واتساب",
+                "footer-name": "رشاد عبد الرحمن بن الشيخ ابوبكر", "footer-info": "المكلا، حضرموت، اليمن | 00967-738389860", "footer-copy": "© 2024 جميع الحقوق محفوظة"
             },
             en: {
-                navName: "Eng. Rashad", heroTag: "Electrical & Electronics Engineer", heroName: "Rashad A. Hussain Bin Al-Shaikh",
-                heroDesc: "10+ years of experience in power plant management, maintenance, control systems, and solar power consulting.",
-                btnContact: "Contact Me", btnExp: "Career Path", expTitle: "Work Experience", eduTitle: "Education",
-                certTitle: "Certifications", skillsTitle: "Skills & Competencies", btnSend: "Send via WhatsApp"
+                "nav-name": "Eng. Rashad", "link-about": "About", "link-exp": "Experience", "link-edu": "Education", "link-skills": "Skills",
+                "hero-tag": "Electrical & Electronics Engineer", "hero-name": "Rashad A. Bin Al-Shaikh",
+                "hero-desc": "10+ years of experience in managing power plants, control systems, and solar energy consultancy.",
+                "btn-contact": "Contact Me", "btn-exp-hero": "Career Path",
+                "exp-title": "Professional Experience", "job1-title": "Deputy Power Plant Manager", "job1-company": "Arabian Yemen Cement Co. Ltd.", "job1-date": "Present",
+                "job1-list": `<li>Managing a 35 MW power plant (5 Caterpillar engines, Leroy Somer generators, and SCADA systems).</li>
+                              <li>Electrical & Electronics Engineer for a 13.5 MW Solar Power project with a 5.6 MWh battery system.</li>
+                              <li>Advisory Committee Member: Preparing technical specifications and analyzing bid offers.</li>
+                              <li>Direct supervision of maintenance departments and setting preventive/corrective maintenance plans.</li>
+                              <li>Communicating with manufacturers for technical support and spare parts procurement.</li>`,
+                "edu-title": "Educational Qualifications", "edu1-degree": "B.Sc. in Electronics & Communication Engineering", "edu1-univ": "Hadhramout University of Science & Technology",
+                "edu2-degree": "Diploma in English Language", "edu2-inst": "Modern International Institute - Mukalla",
+                "cert-title": "Certifications",
+                "cert1": "Power Plant Specialized Course - Woodward Co. (Germany)",
+                "cert2": "Major Mechanical Maintenance (Caterpillar) - Desert Marine Diesel (USA)",
+                "cert3": "Administrative Leadership & Effective Evaluation (Leaders Center)",
+                "skills-title": "Skills & Competencies", "skill1": "Project Management", "skill2": "Team Leadership", "skill3": "Time Management", "skill4": "Work Under Pressure",
+                "msg-title": "Direct Contact", "msg-subtitle": "Send your message and you will be redirected to WhatsApp", "opt1": "Technical Consultation", "opt2": "Maintenance Services", "opt3": "Other", "btn-send": "Send via WhatsApp",
+                "footer-name": "Rashad A. Bin Al-Shaikh", "footer-info": "Mukalla, Hadhramout, Yemen | 00967-738389860", "footer-copy": "© 2024 All Rights Reserved"
             }
         };
 
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            document.getElementById('html-tag').setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-            for (let key in content[currentLang]) {
-                const el = document.getElementById(key.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`));
-                if (el) el.innerText = content[currentLang][key];
+            const isAr = currentLang === 'ar';
+            document.getElementById('html-tag').setAttribute('dir', isAr ? 'rtl' : 'ltr');
+            
+            for (let id in content[currentLang]) {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = content[currentLang][id];
             }
+            
+            // Update Placeholders
+            document.getElementById('sender-name').placeholder = isAr ? "الاسم الكامل" : "Full Name";
+            document.getElementById('sender-message').placeholder = isAr ? "رسالتك هنا..." : "Your message here...";
         }
 
         function sendToWhatsApp() {
             const name = document.getElementById('sender-name').value;
             const service = document.getElementById('service-type').value;
             const msg = document.getElementById('sender-message').value;
-            const text = encodeURIComponent(`الاسم: ${name}\nالخدمة: ${service}\nالرسالة: ${msg}`);
+            const text = encodeURIComponent(`Name: ${name}\nService: ${service}\nMessage: ${msg}`);
             window.open(`https://wa.me/967738389860?text=${text}`, '_blank');
         }
     </script>
