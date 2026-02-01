@@ -1,144 +1,268 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المهندس رشاد عبد الرحمن | سيرة ذاتية احترافية</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>م. رشاد | مهندس طاقة شمسية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #FDB813;      /* أصفر شمسي */
+  --dark: #0B1C2D;         /* أزرق تقني داكن */
+  --light: #f5f7fa;
+  --gray: #6c757d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.8;
+}
+
+section {
+  padding: 70px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, var(--dark), #12395b);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.hero h2 {
+  color: var(--primary);
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 15px auto 30px;
+  color: #d9e6f2;
+}
+
+.buttons a {
+  text-decoration: none;
+  padding: 12px 22px;
+  margin: 5px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: black;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* ===== Headings ===== */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+}
+
+/* ===== Grid ===== */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ===== Skills ===== */
+.skill {
+  margin-bottom: 15px;
+}
+.skill span {
+  font-weight: bold;
+}
+.bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.bar-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* ===== Contact ===== */
+.contact {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+}
+.contact a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #091521;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1 {font-size:28px;}
+}
+</style>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-blue-900">رشاد بن الشيخ ابوبكر</span>
-            <div class="hidden md:flex space-x-reverse space-x-8">
-                <a href="#home" class="hover:text-blue-600 transition">الرئيسية</a>
-                <a href="#about" class="hover:text-blue-600 transition">نبذة</a>
-                <a href="#experience" class="hover:text-blue-600 transition">الخبرات</a>
-                <a href="#skills" class="hover:text-blue-600 transition">المهارات</a>
-                <a href="#contact" class="hover:text-blue-600 transition">تواصل معي</a>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20 text-white">
-        <div class="container mx-auto px-6 text-center">
-            [span_0](start_span)<h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">رشاد عبد الرحمن حسين بن الشيخ ابوبكر[span_0](end_span)</h1>
-            [span_1](start_span)<p class="text-xl md:text-2xl text-blue-300 mb-8 font-light">مهندس كهرباء وإلكترونيات - خبير إدارة محطات الطاقة[span_1](end_span)</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://wa.me/967738389860" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-bold flex items-center transition card-hover">
-                    <i class="fab fa-whatsapp ml-2"></i> واتساب مباشر
-                </a>
-                <a href="mailto:eng.benashikh@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold flex items-center transition card-hover">
-                    <i class="fas fa-envelope ml-2"></i> إرسال إيميل
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <h1>م. رشاد بن الشيخ أبوبكر حسين عبدالرحمن</h1>
+  <h2>مهندس كهرباء وإلكترونيات | متخصص في الطاقة الشمسية</h2>
+  <p>
+    خبرة تزيد عن 10 سنوات في محطات توليد الكهرباء وأنظمة التحكم الصناعية
+    وتصميم وتنفيذ مشاريع الطاقة الشمسية.
+  </p>
 
-    <section id="about" class="py-20 bg-white text-center">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-3xl font-bold mb-8 text-blue-900">نبذة تعريفية</h2>
-            <p class="text-lg leading-relaxed text-gray-600">
-                [span_2](start_span)مهندس كهرباء وإلكترونيات بخبرة تزيد عن عشر سنوات في مجال إدارة وصيانة محطات توليد الطاقة الكهربائية وأجهزة ودوائر القدرة والتحكم[span_2](end_span). 
-                [span_3](start_span)متخصص في إعداد خطط الصيانة وجدولتها والتواصل مع الشركات المصنعة[span_3](end_span)[span_4](start_span)، بالإضافة إلى كوني استشاري لمحطات الطاقة الشمسية[span_4](end_span).
-            </p>
-        </div>
-    </section>
+  <div class="buttons">
+    <a class="btn-primary" href="https://wa.me/967738389860" target="_blank">تواصل واتساب</a>
+    <a class="btn-outline" href="mailto:eng.benashikh@gmail.com">إرسال بريد</a>
+  </div>
+</section>
 
-    <section id="experience" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 text-blue-900">الخبرة العملية</h2>
-            <div class="space-y-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 rounded-xl shadow-md border-r-4 border-blue-600 card-hover">
-                    <div class="flex flex-wrap justify-between items-center mb-4">
-                        [span_5](start_span)<h3 class="text-xl font-bold">نائب مدير محطة كهرباء المصنع[span_5](end_span)</h3>
-                        [span_6](start_span)<span class="text-blue-600 font-semibold">الشركة العربية اليمنية للأسمنت[span_6](end_span)</span>
-                    </div>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        [span_7](start_span)<li>إدارة محطة توليد بقدرة 35 ميجا وات مكونة من 5 مكائن كتربيلر وأنظمة سكادا[span_7](end_span).</li>
-                        [span_8](start_span)<li>الإشراف المباشر على أقسام الصيانة وإعداد البرامج الوقائية والتصحيحية[span_8](end_span).</li>
-                        [span_9](start_span)<li>تحديد قطع الغيار وجدولتها وإعداد الموازنة السنوية[span_9](end_span).</li>
-                    </ul>
-                </div>
+<!-- ABOUT -->
+<section>
+  <div class="container">
+    <h2 class="section-title">نبذة احترافية</h2>
+    <div class="card">
+      مهندس كهرباء وإلكترونيات بخبرة طويلة في إدارة وصيانة محطات التوليد،
+      الإشراف على أنظمة القدرة والتحكم، وإعداد المواصفات الفنية والعطاءات
+      لمشاريع الطاقة الشمسية، مع قيادة فرق الصيانة وتنفيذ برامج الصيانة
+      الوقائية والتصحيحية وفق المعايير العالمية.
+    </div>
+  </div>
+</section>
 
-                <div class="bg-white p-8 rounded-xl shadow-md border-r-4 border-yellow-500 card-hover">
-                    <div class="flex flex-wrap justify-between items-center mb-4">
-                        [span_10](start_span)<h3 class="text-xl font-bold">مهندس مشروع محطة الطاقة الشمسية[span_10](end_span)</h3>
-                        [span_11](start_span)<span class="text-yellow-600 font-semibold">13.5 ميجا وات + نظام بطاريات[span_11](end_span)</span>
-                    </div>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        [span_12](start_span)<li>عضو اللجنة الاستشارية لإعداد عطاء المشروع والمواصفات الفنية[span_12](end_span).</li>
-                        [span_13](start_span)[span_14](start_span)<li>دراسة وتحليل العروض الفنية والتجارية وجداول التوريد[span_13](end_span)[span_14](end_span).</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- CURRENT ROLE -->
+<section>
+  <div class="container">
+    <h2 class="section-title">المنصب الحالي</h2>
+    <div class="card">
+      <h3>نائب مدير محطة كهرباء المصنع + مهندس مشروع الطاقة الشمسية</h3>
+      <p>الشركة العربية اليمنية للأسمنت – المكلا، حضرموت</p>
+      <ul>
+        <li>الإشراف على محطة توليد بقدرة 35 ميجاوات</li>
+        <li>إدارة أنظمة المولدات والمضخات وأنظمة التحكم الصناعي</li>
+        <li>مهندس مشروع محطة طاقة شمسية بقدرة 13.5 ميجاوات</li>
+        <li>نظام بطاريات تخزين بقدرة 5.6 ميجاوات/ساعة</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <section id="skills" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 text-blue-900">المهارات والقدرات</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-blue-50 rounded-lg text-center card-hover">
-                    <i class="fas fa-tools text-4xl text-blue-600 mb-4"></i>
-                    <h4 class="font-bold mb-2">صيانة الأجهزة</h4>
-                    [span_15](start_span)<p class="text-sm text-gray-600">صيانة أجهزة القياس والتحكم، الحساسات، المحركات، والمضخات[span_15](end_span).</p>
-                </div>
-                <div class="p-6 bg-blue-50 rounded-lg text-center card-hover">
-                    <i class="fas fa-project-diagram text-4xl text-blue-600 mb-4"></i>
-                    <h4 class="font-bold mb-2">إدارة المشاريع</h4>
-                    [span_16](start_span)<p class="text-sm text-gray-600">إدارة الوقت، قيادة فريق العمل، واتخاذ القرارات تحت الضغط[span_16](end_span).</p>
-                </div>
-                <div class="p-6 bg-blue-50 rounded-lg text-center card-hover">
-                    <i class="fas fa-language text-4xl text-blue-600 mb-4"></i>
-                    <h4 class="font-bold mb-2">اللغات</h4>
-                    [span_17](start_span)<p class="text-sm text-gray-600">اللغة العربية (اللغة الأم) واللغة الإنجليزية[span_17](end_span).</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- EXPERTISE -->
+<section>
+  <div class="container">
+    <h2 class="section-title">الخبرات الفنية</h2>
+    <div class="grid grid-3">
+      <div class="card">⚡ أنظمة القدرة الكهربائية</div>
+      <div class="card">☀️ تصميم ومواصفات محطات الطاقة الشمسية</div>
+      <div class="card">🛠 الصيانة الصناعية الوقائية والتصحيحية</div>
+      <div class="card">🎛 أنظمة التحكم وأجهزة القياس</div>
+      <div class="card">🧰 إدارة الصيانة وقطع الغيار</div>
+      <div class="card">📊 إعداد التقارير الفنية وتحليل الأعطال</div>
+    </div>
+  </div>
+</section>
 
-    <section class="py-20 bg-blue-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">المؤهلات والشهادات الدولية</h2>
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-right">
-                <div class="flex items-start bg-blue-800 p-6 rounded-lg">
-                    <i class="fas fa-university ml-4 text-2xl text-blue-300"></i>
-                    <div>
-                        [span_18](start_span)<h4 class="font-bold">بكالوريوس هندسة إلكترونية واتصالات[span_18](end_span)</h4>
-                        [span_19](start_span)<p class="text-sm text-blue-200">جامعة حضرموت للعلوم والتكنولوجيا[span_19](end_span)</p>
-                    </div>
-                </div>
-                <div class="flex items-start bg-blue-800 p-6 rounded-lg">
-                    <i class="fas fa-certificate ml-4 text-2xl text-blue-300"></i>
-                    <div>
-                        [span_20](start_span)<h4 class="font-bold">صيانة محطات التوليد - ألمانيا[span_20](end_span)</h4>
-                        [span_21](start_span)<p class="text-sm text-blue-200">شركة Woodward - مدينة كمبن[span_21](end_span)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- EDUCATION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">المؤهلات والشهادات</h2>
+    <div class="card">
+      <ul>
+        <li>بكالوريوس هندسة إلكترونيات واتصالات – جامعة حضرموت</li>
+        <li>دورة متخصصة في محطات التوليد – ألمانيا (Woodward)</li>
+        <li>شهادات صيانة ميكانيكية كبرى – Caterpillar</li>
+        <li>دبلوم لغة إنجليزية</li>
+        <li>دورات إدارية في القيادة وإدارة الأداء والموارد البشرية</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <footer id="contact" class="py-12 bg-gray-900 text-white border-t border-gray-800">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold mb-6">تواصل مباشرة مع المهندس رشاد</h2>
-            <div class="flex justify-center space-x-reverse space-x-6 mb-8">
-                <a href="tel:00967738389860" class="text-2xl hover:text-blue-400 transition"><i class="fas fa-phone"></i></a>
-                <a href="mailto:eng.benashikh@gmail.com" class="text-2xl hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/967738389860" class="text-2xl hover:text-green-400 transition"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            [span_22](start_span)<p class="text-gray-500 text-sm">المكلا، حضرموت، اليمن[span_22](end_span)</p>
-        </div>
-    </footer>
+<!-- SKILLS -->
+<section>
+  <div class="container">
+    <h2 class="section-title">المهارات</h2>
+    <div class="card">
+      <div class="skill"><span>إدارة المشاريع</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
+      <div class="skill"><span>قيادة فرق العمل</span><div class="bar"><div class="bar-fill" style="width:95%"></div></div></div>
+      <div class="skill"><span>اتخاذ القرار</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+      <div class="skill"><span>إدارة الوقت</span><div class="bar"><div class="bar-fill" style="width:88%"></div></div></div>
+      <div class="skill"><span>العمل تحت الضغط</span><div class="bar"><div class="bar-fill" style="width:92%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <h2 class="section-title" style="color:white">تواصل معي</h2>
+    <p>المكلا – حضرموت – اليمن</p>
+    <a href="https://wa.me/967738389860" target="_blank">📱 واتساب: 738389860</a>
+    <a href="mailto:eng.benashikh@gmail.com">✉️ eng.benashikh@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 جميع الحقوق محفوظة | تصميم سيرة ذاتية احترافية
+</footer>
 
 </body>
 </html>
