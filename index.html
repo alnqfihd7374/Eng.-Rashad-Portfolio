@@ -24,7 +24,7 @@
     </script>
     
     <style>
-        body { font-family: 'Tajawal', 'Poppins', sans-serif; transition: background 0.3s ease; }
+        body { font-family: 'Tajawal', 'Poppins', sans-serif; transition: background 0.3s ease; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .solar-gradient { background: linear-gradient(135deg, #FFB800 0%, #FF8A00 100%); }
         .dark .glass { background: rgba(0, 0, 0, 0.3); }
@@ -83,7 +83,23 @@
             </div>
         </div>
 
-        <section id="contact" class="max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl" data-aos="fade-up">
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-900 dark:text-solar" id="exp-title">الخبرة العملية</h2>
+            <div class="space-y-8 max-w-5xl mx-auto">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border-r-8 border-solar" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-2">نائب مدير محطة كهرباء المصنع</h3>
+                    <p class="text-solar font-bold mb-4">الشركة العربية اليمنية للأسمنت المحدودة</p>
+                    <p class="text-gray-600 dark:text-gray-300">إدارة محطة بقدرة 35 ميجا وات والإشراف على فرق الصيانة الميكانيكية والكهربائية بنظام سكادا.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border-r-8 border-blue-600" data-aos="fade-right" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-2">مهندس مشروع الطاقة الشمسية</h3>
+                    <p class="text-blue-600 font-bold mb-4">قدرة 13.5 ميجا وات</p>
+                    <p class="text-gray-600 dark:text-gray-300">عضو اللجنة الاستشارية المسؤولة عن إعداد المواصفات الفنية وتحليل عروض العطاءات للمشروع.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl mt-20" data-aos="fade-up">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold mb-4" id="msg-title">أرسل رسالة مباشرة للمهندس رشاد</h2>
                 <p class="text-gray-500" id="msg-subtitle">سيتم توجيهك إلى الواتساب بمجرد النقر على زر الإرسال</p>
@@ -137,14 +153,14 @@
             ar: {
                 navName: "المهندس رشاد", heroTag: "مهندس كهرباء", heroName: "رشاد عبد الرحمن بن الشيخ ابوبكر",
                 heroDesc: "خبير إدارة وصيانة محطات توليد الطاقة والأنظمة الشمسية المتكاملة.",
-                btnContact: "تواصل معي", btnExp: "المسار المهني",
+                btnContact: "تواصل معي", btnExp: "المسار المهني", expTitle: "الخبرة العملية",
                 stat1: "إجمالي قدرة محطة التوليد", stat2: "مشروع الطاقة الشمسية", stat3: "سنوات خبرة دولية",
                 msgTitle: "أرسل رسالة مباشرة للمهندس رشاد", labelName: "الاسم", labelMsg: "الرسالة", btnSend: "إرسال عبر واتساب"
             },
             en: {
                 navName: "Eng. Rashad", heroTag: "Electrical Engineer", heroName: "Rashad A. Bin Al-Shaikh",
                 heroDesc: "Expert in Management and Maintenance of Power Plants & Integrated Solar Systems.",
-                btnContact: "Contact Me", btnExp: "Career Path",
+                btnContact: "Contact Me", btnExp: "Career Path", expTitle: "Professional Experience",
                 stat1: "Total Power Capacity", stat2: "Solar Power Project", stat3: "Years of Experience",
                 msgTitle: "Send a Message to Eng. Rashad", labelName: "Name", labelMsg: "Message", btnSend: "Send via WhatsApp"
             }
