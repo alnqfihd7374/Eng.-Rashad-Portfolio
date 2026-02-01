@@ -1,268 +1,179 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="html-tag">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>م. رشاد | مهندس طاقة شمسية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المهندس رشاد - خبير الطاقة الشمسية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --primary: #FDB813;      /* أصفر شمسي */
-  --dark: #0B1C2D;         /* أزرق تقني داكن */
-  --light: #f5f7fa;
-  --gray: #6c757d;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Cairo', sans-serif;
-}
-
-body {
-  background: var(--light);
-  color: var(--dark);
-  line-height: 1.8;
-}
-
-section {
-  padding: 70px 20px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* ===== Hero ===== */
-.hero {
-  background: linear-gradient(135deg, var(--dark), #12395b);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 38px;
-  font-weight: 800;
-}
-
-.hero h2 {
-  color: var(--primary);
-  margin: 15px 0;
-  font-weight: 600;
-}
-
-.hero p {
-  max-width: 700px;
-  margin: 15px auto 30px;
-  color: #d9e6f2;
-}
-
-.buttons a {
-  text-decoration: none;
-  padding: 12px 22px;
-  margin: 5px;
-  border-radius: 30px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.btn-primary {
-  background: var(--primary);
-  color: black;
-}
-
-.btn-outline {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-}
-
-/* ===== Headings ===== */
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--dark);
-}
-
-/* ===== Cards ===== */
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  margin-bottom: 25px;
-}
-
-/* ===== Grid ===== */
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* ===== Skills ===== */
-.skill {
-  margin-bottom: 15px;
-}
-.skill span {
-  font-weight: bold;
-}
-.bar {
-  height: 8px;
-  background: #ddd;
-  border-radius: 10px;
-  margin-top: 5px;
-}
-.bar-fill {
-  height: 100%;
-  background: var(--primary);
-  border-radius: 10px;
-}
-
-/* ===== Contact ===== */
-.contact {
-  background: var(--dark);
-  color: white;
-  text-align: center;
-}
-.contact a {
-  color: var(--primary);
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  margin: 10px;
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #091521;
-  color: #aaa;
-  font-size: 14px;
-}
-
-/* Responsive */
-@media(max-width:768px){
-  .hero h1 {font-size:28px;}
-}
-</style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        solar: '#FFB800',
+                        energy: '#0056b3'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Tajawal', 'Poppins', sans-serif; transition: background 0.3s ease; }
+        .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .solar-gradient { background: linear-gradient(135deg, #FFB800 0%, #FF8A00 100%); }
+        .dark .glass { background: rgba(0, 0, 0, 0.3); }
+    </style>
 </head>
+<body class="bg-slate-50 dark:bg-slate-900 dark:text-white">
 
-<body>
+    <nav class="fixed w-full z-50 bg-white/70 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-solar-panel text-solar text-2xl"></i>
+                <span class="text-xl font-bold tracking-tighter" id="nav-name">المهندس رشاد</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLanguage()" class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition text-sm">EN / عربي</button>
+                <button onclick="toggleDarkMode()" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-full">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>م. رشاد بن الشيخ أبوبكر حسين عبدالرحمن</h1>
-  <h2>مهندس كهرباء وإلكترونيات | متخصص في الطاقة الشمسية</h2>
-  <p>
-    خبرة تزيد عن 10 سنوات في محطات توليد الكهرباء وأنظمة التحكم الصناعية
-    وتصميم وتنفيذ مشاريع الطاقة الشمسية.
-  </p>
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-blue-900/40 dark:bg-black/60 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Solar Energy">
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-20 text-center" data-aos="fade-up">
+            <span class="inline-block px-4 py-1 bg-solar text-black rounded-full font-bold mb-4 text-sm uppercase tracking-widest" id="hero-tag">Electrical Engineer</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6" id="hero-name">رشاد عبد الرحمن بن الشيخ ابوبكر</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto" id="hero-desc">خبير إدارة وصيانة محطات توليد الطاقة والأنظمة الشمسية المتكاملة.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#contact" class="solar-gradient text-black px-10 py-4 rounded-xl font-bold hover:scale-105 transition transform duration-300 shadow-xl" id="btn-contact">تواصل معي</a>
+                <a href="#experience" class="bg-white/20 text-white px-10 py-4 rounded-xl font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 transition" id="btn-exp">المسار المهني</a>
+            </div>
+        </div>
+    </section>
 
-  <div class="buttons">
-    <a class="btn-primary" href="https://wa.me/967738389860" target="_blank">تواصل واتساب</a>
-    <a class="btn-outline" href="mailto:eng.benashikh@gmail.com">إرسال بريد</a>
-  </div>
-</section>
+    <main class="container mx-auto px-6 py-20">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-32 relative z-30 mb-20">
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl text-center border-b-4 border-solar" data-aos="zoom-in" data-aos-delay="100">
+                <h3 class="text-4xl font-bold text-solar mb-2">35 MW</h3>
+                <p class="text-gray-500 dark:text-gray-400" id="stat-1">إجمالي قدرة محطة التوليد</p>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl text-center border-b-4 border-solar" data-aos="zoom-in" data-aos-delay="200">
+                <h3 class="text-4xl font-bold text-solar mb-2">13.5 MW</h3>
+                <p class="text-gray-500 dark:text-gray-400" id="stat-2">مشروع الطاقة الشمسية</p>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl text-center border-b-4 border-solar" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="text-4xl font-bold text-solar mb-2">+10</h3>
+                <p class="text-gray-500 dark:text-gray-400" id="stat-3">سنوات خبرة دولية</p>
+            </div>
+        </div>
 
-<!-- ABOUT -->
-<section>
-  <div class="container">
-    <h2 class="section-title">نبذة احترافية</h2>
-    <div class="card">
-      مهندس كهرباء وإلكترونيات بخبرة طويلة في إدارة وصيانة محطات التوليد،
-      الإشراف على أنظمة القدرة والتحكم، وإعداد المواصفات الفنية والعطاءات
-      لمشاريع الطاقة الشمسية، مع قيادة فرق الصيانة وتنفيذ برامج الصيانة
-      الوقائية والتصحيحية وفق المعايير العالمية.
-    </div>
-  </div>
-</section>
+        <section id="contact" class="max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4" id="msg-title">أرسل رسالة مباشرة للمهندس رشاد</h2>
+                <p class="text-gray-500" id="msg-subtitle">سيتم توجيهك إلى الواتساب بمجرد النقر على زر الإرسال</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block mb-2 font-bold" id="label-name">الاسم</label>
+                    <input type="text" id="sender-name" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 focus:ring-2 focus:ring-solar outline-none" placeholder="اكتب اسمك هنا...">
+                </div>
+                <div>
+                    <label class="block mb-2 font-bold" id="label-service">الخدمة المطلوبة</label>
+                    <select id="service-type" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 focus:ring-2 focus:ring-solar outline-none">
+                        <option value="استشارة طاقة شمسية">استشارة طاقة شمسية</option>
+                        <option value="صيانة محطات">صيانة محطات</option>
+                        <option value="عرض عمل">عرض عمل</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block mb-2 font-bold" id="label-msg">الرسالة</label>
+                    <textarea id="sender-message" rows="4" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 focus:ring-2 focus:ring-solar outline-none" placeholder="كيف يمكنني مساعدتك؟"></textarea>
+                </div>
+                <button onclick="sendToWhatsApp()" class="md:col-span-2 bg-[#25D366] hover:bg-[#128C7E] text-white py-4 rounded-xl font-bold flex justify-center items-center gap-3 transition shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span id="btn-send">إرسال عبر واتساب</span>
+                </button>
+            </div>
+        </section>
+    </main>
 
-<!-- CURRENT ROLE -->
-<section>
-  <div class="container">
-    <h2 class="section-title">المنصب الحالي</h2>
-    <div class="card">
-      <h3>نائب مدير محطة كهرباء المصنع + مهندس مشروع الطاقة الشمسية</h3>
-      <p>الشركة العربية اليمنية للأسمنت – المكلا، حضرموت</p>
-      <ul>
-        <li>الإشراف على محطة توليد بقدرة 35 ميجاوات</li>
-        <li>إدارة أنظمة المولدات والمضخات وأنظمة التحكم الصناعي</li>
-        <li>مهندس مشروع محطة طاقة شمسية بقدرة 13.5 ميجاوات</li>
-        <li>نظام بطاريات تخزين بقدرة 5.6 ميجاوات/ساعة</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <footer class="py-10 text-center text-gray-500 border-t border-gray-200 dark:border-gray-800">
+        <p>&copy; 2024 Eng. Rashad - Solar Power Specialist</p>
+    </footer>
 
-<!-- EXPERTISE -->
-<section>
-  <div class="container">
-    <h2 class="section-title">الخبرات الفنية</h2>
-    <div class="grid grid-3">
-      <div class="card">⚡ أنظمة القدرة الكهربائية</div>
-      <div class="card">☀️ تصميم ومواصفات محطات الطاقة الشمسية</div>
-      <div class="card">🛠 الصيانة الصناعية الوقائية والتصحيحية</div>
-      <div class="card">🎛 أنظمة التحكم وأجهزة القياس</div>
-      <div class="card">🧰 إدارة الصيانة وقطع الغيار</div>
-      <div class="card">📊 إعداد التقارير الفنية وتحليل الأعطال</div>
-    </div>
-  </div>
-</section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
 
-<!-- EDUCATION -->
-<section>
-  <div class="container">
-    <h2 class="section-title">المؤهلات والشهادات</h2>
-    <div class="card">
-      <ul>
-        <li>بكالوريوس هندسة إلكترونيات واتصالات – جامعة حضرموت</li>
-        <li>دورة متخصصة في محطات التوليد – ألمانيا (Woodward)</li>
-        <li>شهادات صيانة ميكانيكية كبرى – Caterpillar</li>
-        <li>دبلوم لغة إنجليزية</li>
-        <li>دورات إدارية في القيادة وإدارة الأداء والموارد البشرية</li>
-      </ul>
-    </div>
-  </div>
-</section>
+        // Dark Mode Logic
+        function toggleDarkMode() {
+            const html = document.getElementById('html-tag');
+            const icon = document.getElementById('theme-icon');
+            html.classList.toggle('dark');
+            icon.classList.toggle('fa-sun');
+            icon.classList.toggle('fa-moon');
+        }
 
-<!-- SKILLS -->
-<section>
-  <div class="container">
-    <h2 class="section-title">المهارات</h2>
-    <div class="card">
-      <div class="skill"><span>إدارة المشاريع</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
-      <div class="skill"><span>قيادة فرق العمل</span><div class="bar"><div class="bar-fill" style="width:95%"></div></div></div>
-      <div class="skill"><span>اتخاذ القرار</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
-      <div class="skill"><span>إدارة الوقت</span><div class="bar"><div class="bar-fill" style="width:88%"></div></div></div>
-      <div class="skill"><span>العمل تحت الضغط</span><div class="bar"><div class="bar-fill" style="width:92%"></div></div></div>
-    </div>
-  </div>
-</section>
+        // Language Logic
+        let currentLang = 'ar';
+        const content = {
+            ar: {
+                navName: "المهندس رشاد", heroTag: "مهندس كهرباء", heroName: "رشاد عبد الرحمن بن الشيخ ابوبكر",
+                heroDesc: "خبير إدارة وصيانة محطات توليد الطاقة والأنظمة الشمسية المتكاملة.",
+                btnContact: "تواصل معي", btnExp: "المسار المهني",
+                stat1: "إجمالي قدرة محطة التوليد", stat2: "مشروع الطاقة الشمسية", stat3: "سنوات خبرة دولية",
+                msgTitle: "أرسل رسالة مباشرة للمهندس رشاد", labelName: "الاسم", labelMsg: "الرسالة", btnSend: "إرسال عبر واتساب"
+            },
+            en: {
+                navName: "Eng. Rashad", heroTag: "Electrical Engineer", heroName: "Rashad A. Bin Al-Shaikh",
+                heroDesc: "Expert in Management and Maintenance of Power Plants & Integrated Solar Systems.",
+                btnContact: "Contact Me", btnExp: "Career Path",
+                stat1: "Total Power Capacity", stat2: "Solar Power Project", stat3: "Years of Experience",
+                msgTitle: "Send a Message to Eng. Rashad", labelName: "Name", labelMsg: "Message", btnSend: "Send via WhatsApp"
+            }
+        };
 
-<!-- CONTACT -->
-<section class="contact">
-  <div class="container">
-    <h2 class="section-title" style="color:white">تواصل معي</h2>
-    <p>المكلا – حضرموت – اليمن</p>
-    <a href="https://wa.me/967738389860" target="_blank">📱 واتساب: 738389860</a>
-    <a href="mailto:eng.benashikh@gmail.com">✉️ eng.benashikh@gmail.com</a>
-  </div>
-</section>
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('html-tag').setAttribute('dir', dir);
+            document.getElementById('html-tag').setAttribute('lang', currentLang);
+            
+            // Update Text
+            for (let key in content[currentLang]) {
+                const element = document.getElementById(key.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`));
+                if (element) element.innerText = content[currentLang][key];
+            }
+        }
 
-<footer>
-  © 2026 جميع الحقوق محفوظة | تصميم سيرة ذاتية احترافية
-</footer>
-
+        // WhatsApp Messaging
+        function sendToWhatsApp() {
+            const name = document.getElementById('sender-name').value;
+            const service = document.getElementById('service-type').value;
+            const msg = document.getElementById('sender-message').value;
+            const phone = "967738389860";
+            
+            const fullMessage = `مرحباً مهندس رشاد، أنا ${name}. بخصوص ${service}: ${msg}`;
+            const encodedMessage = encodeURIComponent(fullMessage);
+            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+        }
+    </script>
 </body>
 </html>
