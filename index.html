@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المهندس رشاد - خبير الطاقة الشمسية</title>
+    <title>المهندس رشاد - السيرة الذاتية الكاملة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -25,9 +25,9 @@
     
     <style>
         body { font-family: 'Tajawal', 'Poppins', sans-serif; transition: background 0.3s ease; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .solar-gradient { background: linear-gradient(135deg, #FFB800 0%, #FF8A00 100%); }
-        .dark .glass { background: rgba(0, 0, 0, 0.3); }
+        .experience-card { border-right: 4px solid #FFB800; transition: all 0.3s ease; }
+        .experience-card:hover { transform: scale(1.02); shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 dark:text-white">
@@ -38,7 +38,12 @@
                 <i class="fas fa-solar-panel text-solar text-2xl"></i>
                 <span class="text-xl font-bold tracking-tighter" id="nav-name">المهندس رشاد</span>
             </div>
-            
+            <div class="flex items-center gap-4 text-sm font-medium hidden md:flex">
+                <a href="#about" class="hover:text-solar transition">نبذة</a>
+                <a href="#experience" class="hover:text-solar transition">الخبرات</a>
+                <a href="#education" class="hover:text-solar transition">المؤهلات</a>
+                <a href="#skills" class="hover:text-solar transition">المهارات</a>
+            </div>
             <div class="flex items-center gap-4">
                 <button onclick="toggleLanguage()" class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition text-sm">EN / عربي</button>
                 <button onclick="toggleDarkMode()" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-full">
@@ -53,14 +58,12 @@
             <div class="absolute inset-0 bg-blue-900/40 dark:bg-black/60 z-10"></div>
             <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Solar Energy">
         </div>
-        
         <div class="container mx-auto px-6 relative z-20 text-center" data-aos="fade-up">
-            <span class="inline-block px-4 py-1 bg-solar text-black rounded-full font-bold mb-4 text-sm uppercase tracking-widest" id="hero-tag">Electrical Engineer</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6" id="hero-name">رشاد عبد الرحمن بن الشيخ ابوبكر</h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto" id="hero-desc">خبير إدارة وصيانة محطات توليد الطاقة والأنظمة الشمسية المتكاملة.</p>
-            
+            <span class="inline-block px-4 py-1 bg-solar text-black rounded-full font-bold mb-4 text-sm uppercase tracking-widest" id="hero-tag">Electrical & Electronics Engineer</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6" id="hero-name">رشاد عبد الرحمن حسين بن الشيخ ابوبكر</h1>
+            <p class="text-xl text-gray-200 mb-10 max-w-3xl mx-auto" id="hero-desc">خبرة تزيد عن 10 سنوات في إدارة وصيانة محطات توليد الطاقة الكهربائية وأجهزة التحكم واستشاري محطات الطاقة الشمسية.</p>
             <div class="flex flex-wrap justify-center gap-6">
-                <a href="#contact" class="solar-gradient text-black px-10 py-4 rounded-xl font-bold hover:scale-105 transition transform duration-300 shadow-xl" id="btn-contact">تواصل معي</a>
+                <a href="#contact" class="solar-gradient text-black px-10 py-4 rounded-xl font-bold hover:scale-105 transition shadow-xl" id="btn-contact">تواصل معي</a>
                 <a href="#experience" class="bg-white/20 text-white px-10 py-4 rounded-xl font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 transition" id="btn-exp">المسار المهني</a>
             </div>
         </div>
@@ -68,77 +71,120 @@
 
     <main class="container mx-auto px-6 py-20">
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-32 relative z-30 mb-20">
-            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl text-center border-b-4 border-solar" data-aos="zoom-in" data-aos-delay="100">
-                <h3 class="text-4xl font-bold text-solar mb-2">35 MW</h3>
-                <p class="text-gray-500 dark:text-gray-400" id="stat-1">إجمالي قدرة محطة التوليد</p>
-            </div>
-            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl text-center border-b-4 border-solar" data-aos="zoom-in" data-aos-delay="200">
-                <h3 class="text-4xl font-bold text-solar mb-2">13.5 MW</h3>
-                <p class="text-gray-500 dark:text-gray-400" id="stat-2">مشروع الطاقة الشمسية</p>
-            </div>
-            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl text-center border-b-4 border-solar" data-aos="zoom-in" data-aos-delay="300">
-                <h3 class="text-4xl font-bold text-solar mb-2">+10</h3>
-                <p class="text-gray-500 dark:text-gray-400" id="stat-3">سنوات خبرة دولية</p>
-            </div>
-        </div>
-
-        <section id="experience" class="py-20">
-            <h2 class="text-4xl font-bold text-center mb-16 text-blue-900 dark:text-solar" id="exp-title">الخبرة العملية</h2>
-            <div class="space-y-8 max-w-5xl mx-auto">
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border-r-8 border-solar" data-aos="fade-right">
-                    <h3 class="text-2xl font-bold mb-2">نائب مدير محطة كهرباء المصنع</h3>
-                    <p class="text-solar font-bold mb-4">الشركة العربية اليمنية للأسمنت المحدودة</p>
-                    <p class="text-gray-600 dark:text-gray-300">إدارة محطة بقدرة 35 ميجا وات والإشراف على فرق الصيانة الميكانيكية والكهربائية بنظام سكادا.</p>
+        <section id="experience" class="py-12">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3" id="exp-title">
+                <i class="fas fa-briefcase text-solar"></i> الخبرات العملية
+            </h2>
+            <div class="space-y-8">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md experience-card" data-aos="fade-right">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold">نائب مدير محطة كهرباء المصنع</h3>
+                            <p class="text-solar font-bold">الشركة العربية اليمنية للأسمنت المحدودة</p>
+                        </div>
+                        <span class="text-gray-500 text-sm">حاليًا</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>إدارة محطة بقدرة 35 ميجا وات (5 مكائن كتربيلر، مولدات ليروي سومر، ونظم سكادا).</li>
+                        <li>مهندس كهرباء وإلكترونيات لمشروع الطاقة الشمسية بقدرة 13.5 ميجا وات ونظام بطاريات 5.6 ميجا وات ساعة.</li>
+                        <li>عضو اللجنة الاستشارية: إعداد عطاء المشروع والمواصفات الفنية وتحليل العروض.</li>
+                        <li>الإشراف المباشر على أقسام الصيانة وإعداد برامج الصيانة الوقائية والتصحيحية.</li>
+                        <li>التواصل مع الشركات المصنعة لطلب قطع الغيار والحصول على الدعم الفني.</li>
+                    </ul>
                 </div>
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border-r-8 border-blue-600" data-aos="fade-right" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold mb-2">مهندس مشروع الطاقة الشمسية</h3>
-                    <p class="text-blue-600 font-bold mb-4">قدرة 13.5 ميجا وات</p>
-                    <p class="text-gray-600 dark:text-gray-300">عضو اللجنة الاستشارية المسؤولة عن إعداد المواصفات الفنية وتحليل عروض العطاءات للمشروع.</p>
+            </div>
+        </section>
+
+        <section id="education" class="py-12 grid md:grid-cols-2 gap-12">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-8 flex items-center gap-3" id="edu-title">
+                    <i class="fas fa-graduation-cap text-solar"></i> المؤهلات التعليمية
+                </h2>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border-r-4 border-blue-500">
+                    <h4 class="font-bold">بكالوريوس هندسة إلكترونية واتصالات</h4>
+                    <p class="text-gray-500">جامعة حضرموت للعلوم والتكنولوجيا</p>
+                </div>
+                <div class="mt-4 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border-r-4 border-blue-500">
+                    <h4 class="font-bold">دبلوم لغة إنجليزية</h4>
+                    <p class="text-gray-500">المعهد الدولي الحديث - المكلا</p>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h2 class="text-3xl font-bold mb-8 flex items-center gap-3" id="cert-title">
+                    <i class="fas fa-award text-solar"></i> الشهادات التدريبية
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
+                        <i class="fas fa-check-circle text-solar"></i>
+                        <span>دورة متخصصة بمحطات التوليد - شركة Woodward (ألمانيا)</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
+                        <i class="fas fa-check-circle text-solar"></i>
+                        <span>صيانة ميكانيكية كبرى (كتربيلر) - Desert Marine Diesel (أمريكا)</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
+                        <i class="fas fa-check-circle text-solar"></i>
+                        <span>القيادة الإدارية والتقييم الفعال (مركز القادة للتطوير)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-12">
+            <h2 class="text-3xl font-bold mb-12 text-center" id="skills-title">المهارات والقدرات</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in">
+                    <i class="fas fa-tasks text-3xl text-solar mb-3"></i>
+                    <h4 class="font-bold">إدارة المشاريع</h4>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-users text-3xl text-solar mb-3"></i>
+                    <h4 class="font-bold">قيادة فريق العمل</h4>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-clock text-3xl text-solar mb-3"></i>
+                    <h4 class="font-bold">إدارة الوقت</h4>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-bolt text-3xl text-solar mb-3"></i>
+                    <h4 class="font-bold">العمل تحت الضغط</h4>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl mt-20" data-aos="fade-up">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold mb-4" id="msg-title">أرسل رسالة مباشرة للمهندس رشاد</h2>
-                <p class="text-gray-500" id="msg-subtitle">سيتم توجيهك إلى الواتساب بمجرد النقر على زر الإرسال</p>
+                <h2 class="text-3xl font-bold mb-4" id="msg-title">تواصل مباشر</h2>
+                <p class="text-gray-500" id="msg-subtitle">أرسل رسالتك وسيتم توجيهك إلى الواتساب</p>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block mb-2 font-bold" id="label-name">الاسم</label>
-                    <input type="text" id="sender-name" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 focus:ring-2 focus:ring-solar outline-none" placeholder="اكتب اسمك هنا...">
-                </div>
-                <div>
-                    <label class="block mb-2 font-bold" id="label-service">الخدمة المطلوبة</label>
-                    <select id="service-type" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 focus:ring-2 focus:ring-solar outline-none">
-                        <option value="استشارة طاقة شمسية">استشارة طاقة شمسية</option>
-                        <option value="صيانة محطات">صيانة محطات</option>
-                        <option value="عرض عمل">عرض عمل</option>
-                    </select>
-                </div>
-                <div class="md:col-span-2">
-                    <label class="block mb-2 font-bold" id="label-msg">الرسالة</label>
-                    <textarea id="sender-message" rows="4" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 focus:ring-2 focus:ring-solar outline-none" placeholder="كيف يمكنني مساعدتك؟"></textarea>
-                </div>
-                <button onclick="sendToWhatsApp()" class="md:col-span-2 bg-[#25D366] hover:bg-[#128C7E] text-white py-4 rounded-xl font-bold flex justify-center items-center gap-3 transition shadow-lg">
-                    <i class="fab fa-whatsapp text-2xl"></i>
-                    <span id="btn-send">إرسال عبر واتساب</span>
+                <input type="text" id="sender-name" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 outline-none focus:ring-2 focus:ring-solar" placeholder="الاسم الكامل">
+                <select id="service-type" class="w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 outline-none">
+                    <option value="استشارة طاقة">طلب استشارة فنية</option>
+                    <option value="صيانة">طلب خدمات صيانة</option>
+                    <option value="أخرى">أخرى</option>
+                </select>
+                <textarea id="sender-message" rows="4" class="md:col-span-2 w-full px-4 py-3 rounded-xl bg-gray-100 dark:bg-slate-700 outline-none focus:ring-2 focus:ring-solar" placeholder="رسالتك هنا..."></textarea>
+                <button onclick="sendToWhatsApp()" class="md:col-span-2 bg-[#25D366] text-white py-4 rounded-xl font-bold flex justify-center items-center gap-3 hover:bg-[#128C7E] transition">
+                    <i class="fab fa-whatsapp text-2xl"></i> <span id="btn-send">إرسال عبر واتساب</span>
                 </button>
             </div>
         </section>
     </main>
 
-    <footer class="py-10 text-center text-gray-500 border-t border-gray-200 dark:border-gray-800">
-        <p>&copy; 2024 Eng. Rashad - Solar Power Specialist</p>
+    <footer class="py-12 bg-white dark:bg-slate-900 border-t dark:border-slate-800 text-center">
+        <div class="mb-4">
+            <p class="font-bold">رشاد عبد الرحمن بن الشيخ ابوبكر</p>
+            <p class="text-gray-500 text-sm">المكلا، حضرموت، اليمن | 00967-738389860</p>
+        </div>
+        <p class="text-xs text-gray-400">&copy; 2024 جميع الحقوق محفوظة</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        // Dark Mode Logic
         function toggleDarkMode() {
             const html = document.getElementById('html-tag');
             const icon = document.getElementById('theme-icon');
@@ -147,48 +193,37 @@
             icon.classList.toggle('fa-moon');
         }
 
-        // Language Logic
         let currentLang = 'ar';
         const content = {
             ar: {
-                navName: "المهندس رشاد", heroTag: "مهندس كهرباء", heroName: "رشاد عبد الرحمن بن الشيخ ابوبكر",
-                heroDesc: "خبير إدارة وصيانة محطات توليد الطاقة والأنظمة الشمسية المتكاملة.",
-                btnContact: "تواصل معي", btnExp: "المسار المهني", expTitle: "الخبرة العملية",
-                stat1: "إجمالي قدرة محطة التوليد", stat2: "مشروع الطاقة الشمسية", stat3: "سنوات خبرة دولية",
-                msgTitle: "أرسل رسالة مباشرة للمهندس رشاد", labelName: "الاسم", labelMsg: "الرسالة", btnSend: "إرسال عبر واتساب"
+                navName: "المهندس رشاد", heroTag: "مهندس كهرباء وإلكترونيات", heroName: "رشاد عبد الرحمن حسين بن الشيخ ابوبكر",
+                heroDesc: "خبرة تزيد عن 10 سنوات في إدارة وصيانة محطات توليد الطاقة الكهربائية وأجهزة التحكم واستشاري محطات الطاقة الشمسية.",
+                btnContact: "تواصل معي", btnExp: "المسار المهني", expTitle: "الخبرات العملية", eduTitle: "المؤهلات التعليمية",
+                certTitle: "الشهادات التدريبية", skillsTitle: "المهارات والقدرات", btnSend: "إرسال عبر واتساب"
             },
             en: {
-                navName: "Eng. Rashad", heroTag: "Electrical Engineer", heroName: "Rashad A. Bin Al-Shaikh",
-                heroDesc: "Expert in Management and Maintenance of Power Plants & Integrated Solar Systems.",
-                btnContact: "Contact Me", btnExp: "Career Path", expTitle: "Professional Experience",
-                stat1: "Total Power Capacity", stat2: "Solar Power Project", stat3: "Years of Experience",
-                msgTitle: "Send a Message to Eng. Rashad", labelName: "Name", labelMsg: "Message", btnSend: "Send via WhatsApp"
+                navName: "Eng. Rashad", heroTag: "Electrical & Electronics Engineer", heroName: "Rashad A. Hussain Bin Al-Shaikh",
+                heroDesc: "10+ years of experience in power plant management, maintenance, control systems, and solar power consulting.",
+                btnContact: "Contact Me", btnExp: "Career Path", expTitle: "Work Experience", eduTitle: "Education",
+                certTitle: "Certifications", skillsTitle: "Skills & Competencies", btnSend: "Send via WhatsApp"
             }
         };
 
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            const dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            document.getElementById('html-tag').setAttribute('dir', dir);
-            document.getElementById('html-tag').setAttribute('lang', currentLang);
-            
-            // Update Text
+            document.getElementById('html-tag').setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
             for (let key in content[currentLang]) {
-                const element = document.getElementById(key.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`));
-                if (element) element.innerText = content[currentLang][key];
+                const el = document.getElementById(key.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`));
+                if (el) el.innerText = content[currentLang][key];
             }
         }
 
-        // WhatsApp Messaging
         function sendToWhatsApp() {
             const name = document.getElementById('sender-name').value;
             const service = document.getElementById('service-type').value;
             const msg = document.getElementById('sender-message').value;
-            const phone = "967738389860";
-            
-            const fullMessage = `مرحباً مهندس رشاد، أنا ${name}. بخصوص ${service}: ${msg}`;
-            const encodedMessage = encodeURIComponent(fullMessage);
-            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+            const text = encodeURIComponent(`الاسم: ${name}\nالخدمة: ${service}\nالرسالة: ${msg}`);
+            window.open(`https://wa.me/967738389860?text=${text}`, '_blank');
         }
     </script>
 </body>
